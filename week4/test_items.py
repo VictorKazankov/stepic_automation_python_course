@@ -1,4 +1,4 @@
-from week4.home_task.tests_user_registration.locators import BOOKS_ITEM_NAVIGATION_MENU_CLASS, \
+from week4.locators import BOOKS_ITEM_NAVIGATION_MENU_CLASS, \
     CODERS_WORK_BOOK_TITLE_CSS, ADD_BUSKET_BUTTON_ID
 
 
