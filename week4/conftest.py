@@ -33,6 +33,24 @@ def change_languages(request):
     elif languare_name == 'fr':
         print("\nopen france page")
         link = f'http://selenium1py.pythonanywhere.com/{languare_name}/'
+    elif languare_name == 'ar':
+        print("\nopen arab page")
+        link = f'http://selenium1py.pythonanywhere.com/{languare_name}/'
+    elif languare_name == 'ca':
+        print("\nopen catalana page")
+        link = f'http://selenium1py.pythonanywhere.com/{languare_name}/'
+    elif languare_name == 'cs':
+        print("\nopen chesky page")
+        link = f'http://selenium1py.pythonanywhere.com/{languare_name}/'
+    elif languare_name == 'da':
+        print("\nopen dansky page")
+        link = f'http://selenium1py.pythonanywhere.com/{languare_name}/'
+    elif languare_name == 'de':
+        print("\nopen deutsch page")
+        link = f'http://selenium1py.pythonanywhere.com/{languare_name}/'
+    elif languare_name == 'el':
+        print("\nopen greece page")
+        link = f'http://selenium1py.pythonanywhere.com/{languare_name}/'
     else:
         raise pytest.UsageError("--languare_name should be es,ru,fr or en-gb")
     return link
