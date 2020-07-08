@@ -1,5 +1,5 @@
-from week4.home_task.stepic_automation_python_course.helpers import create_user_data, fill_field
-from week4.home_task.stepic_automation_python_course.locators import EMAIL_REGISTRATION_FIELD_ID, \
+from week4.home_task.tests_user_registration.helpers import create_user_data, fill_field
+from week4.home_task.tests_user_registration.locators import EMAIL_REGISTRATION_FIELD_ID, \
     PASSWORD_REGISTRATION_FIELD_ID, PASSWORD_CONFIRM_REGISTRATION_FIELD_ID, REGISTRATION_BUTTON_NAME, \
     CONFIRM_REGISTRATION_ALERT_NAME, LOGIN_LINK_ID
 
