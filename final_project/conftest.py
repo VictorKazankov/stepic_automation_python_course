@@ -4,8 +4,6 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-link_general = 'http://selenium1py.pythonanywhere.com/'
-
 
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default="chrome")
@@ -41,9 +39,6 @@ def change_browser(request):
 def browser(request):
     print("\nstart chrome browser for test..")
     browser = change_browser(request)
-    browser.implicitly_wait(20)
-    browser.get(link_general)
-    time.sleep(5)
     yield browser
     print("\nquit browser..")
     browser.quit()
