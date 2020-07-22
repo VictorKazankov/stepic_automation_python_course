@@ -33,6 +33,7 @@ def test_is_displayed_basket_button(browser):
     main_page.open()
     main_page.is_displayed_basket_button()
 
+
 # def test_guest_can_go_to_login_page(browser):
 #     page = MainPage(browser,
 #                     main_page_url)  # инициализируем Page Object, передаем в конструктор экземпляр драйвера и url адрес
