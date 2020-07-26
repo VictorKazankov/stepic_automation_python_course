@@ -13,3 +13,12 @@ class ProductPage(BasePage):
     def should_be_success_message(self):
         assert self.get_element_present(*ProductPageLocators.SUCCESS_ADD_TO_BASKET_ALERT), \
             "Product is not add to basket"
+
+    def open_basket(self):
+        locale = self.browser
+        view_basket_button = self.get_element_present(*ProductPageLocators.VIEW_BASKET_BUTTON)
+        view_basket_button.click()
+
+    def go_to_login_page(self):
+        link = self.browser.find_element(*ProductPageLocators.LOGIN_LINK)
+        link.click()

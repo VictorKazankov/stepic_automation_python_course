@@ -1,7 +1,6 @@
 import pytest
 
 from .pages.main_page import MainPage
-from .pages.login_page import LoginPage
 
 main_page_url = "http://selenium1py.pythonanywhere.com/"
 
@@ -32,7 +31,6 @@ def test_is_displayed_basket_button(browser):
     main_page = MainPage(browser, main_page_url)
     main_page.open()
     main_page.is_displayed_basket_button()
-
 
 # def test_guest_can_go_to_login_page(browser):
 #     page = MainPage(browser,

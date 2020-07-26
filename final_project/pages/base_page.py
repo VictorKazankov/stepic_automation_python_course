@@ -2,8 +2,6 @@ from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from final_project.pages.locators import GeneralLocators
-
 
 class BasePage:
     def __init__(self, browser, url, timeout=10):
@@ -13,10 +11,6 @@ class BasePage:
 
     def open(self):
         self.browser.get(self.url)
-
-    def open_basket(self):
-        view_basket_button = self.get_element_present(*GeneralLocators.VIEW_BASKET_BUTTON)
-        view_basket_button.click()
 
     def get_element_present(self, how, what):
         try:
@@ -32,10 +26,6 @@ class BasePage:
             return True
 
         return False
-
-    def go_to_login_page(self):
-        link = self.browser.find_element(*GeneralLocators.LOGIN_LINK)
-        link.click()
 
     def fill_field(self, field, text):
         field.click()
