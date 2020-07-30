@@ -1,4 +1,4 @@
-from final_project.pages.locators import ProductPageLocators
+from final_project.pages.locators import ProductPageLocators, name_book
 from .base_page import BasePage
 
 
@@ -15,10 +15,14 @@ class ProductPage(BasePage):
             "Product is not add to basket"
 
     def open_basket(self):
-        locale = self.browser
         view_basket_button = self.get_element_present(*ProductPageLocators.VIEW_BASKET_BUTTON)
         view_basket_button.click()
 
     def go_to_login_page(self):
         link = self.browser.find_element(*ProductPageLocators.LOGIN_LINK)
         link.click()
+
+    def is_displayed_coders_at_work_book_name(self):
+        book_locator = self.get_element_present(*ProductPageLocators.CODERS_AT_WORK_BOOK_NAME)
+        assert name_book == book_locator.text
+
